@@ -8,3 +8,4 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 **HTML** 
 - Day 2: [Starting HTML learning about basic elements, tags and attributes](Notes/July%202024/07_22/class02_07_22.ipynb)
+- Day 3: [Learned about CDN, DNS, Origin Server, Edge Sever, Request Response cycle w/ Http Protocol,](Notes/July%202024/07_23/class03_07_23.ipynb)
