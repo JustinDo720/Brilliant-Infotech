@@ -12,3 +12,4 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - Day 4: [Basics of Python P1](Notes/July%202024/07_24/class04_07_24.ipynb)
 - Day 5: [Tuples, Hashmap, Starting Functions](Notes/July%202024/07_25/class05_07_25.ipynb)
 - Day 6: [More functions, Modules, File Handling, Starting OOP](Notes/July%202024/07_28/class06_07_28.ipynb)
+- Day 7: [Classes, Encapsulation, Inheritance, Super Function](Notes/July%202024/07_29/class07_07_29.ipynb)
