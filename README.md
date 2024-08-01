@@ -17,6 +17,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 6: Advanced Python](#day-6-advanced-python)
 - [Day 7: Object Oriented Programming](#day-7-object-oriented-programming)
 - [Day 8: Continued Object Oriented Programming](#day-8-continued-object-oriented-programming)
+- [Day 9: Error Handling](#day-9-error-handling)
 
 ----
 
@@ -44,3 +45,6 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 8: Continued Object Oriented Programming
 - Day 8: [Polymorphism & Abstraction](Notes/July%202024/07_30/class08_07_30.ipynb)
+
+### Day 9: Error Handling
+- Day 9: [Exception Handling, Try Except Finally Block, Cusotm Exception Class](Notes/July%202024/07_31/class09_07_31.ipynb)
