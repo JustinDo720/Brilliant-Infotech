@@ -18,6 +18,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 7: Object Oriented Programming](#day-7-object-oriented-programming)
 - [Day 8: Continued Object Oriented Programming](#day-8-continued-object-oriented-programming)
 - [Day 9: Error Handling](#day-9-error-handling)
+- [Day 10: Regex](#day-10-regex)
 
 ----
 
@@ -48,3 +49,6 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 9: Error Handling
 - Day 9: [Exception Handling, Try Except Finally Block, Cusotm Exception Class](Notes/July%202024/07_31/class09_07_31.ipynb)
+
+### Day 10: Regex 
+- Day 10 [Regular Expressions, Symbols, Raw Strings, Metacharacters](Notes/August%202024/08_01/class10_08_01.ipynb)
