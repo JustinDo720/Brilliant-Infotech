@@ -19,6 +19,8 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 8: Continued Object Oriented Programming](#day-8-continued-object-oriented-programming)
 - [Day 9: Error Handling](#day-9-error-handling)
 - [Day 10: Regex](#day-10-regex)
+- [Day 11: Tkinter](#day-11-tkinter)
+- [Day 12: MySQL](#day-12-mysql)
 
 ----
 
@@ -52,3 +54,9 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 10: Regex 
 - Day 10 [Regular Expressions, Symbols, Raw Strings, Metacharacters](Notes/August%202024/08_01/class10_08_01.ipynb)
+
+### Day 11: Tkinter
+- Day 11 [Tkinter, GUI, Widgets](Notes/August%202024/08_04/class11_08_04.ipynb)
+
+### Day 12: MySQL
+- Day 12 [MySQL, Workbench, Create Alter and Query from DB](Notes/August%202024/08_05/class12_08_05.ipynb)
