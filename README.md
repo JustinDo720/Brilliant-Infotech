@@ -21,6 +21,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 10: Regex](#day-10-regex)
 - [Day 11: Tkinter](#day-11-tkinter)
 - [Day 12: MySQL](#day-12-mysql)
+- [Day 13: MySQL Continued](#day-13-mysql-continued)
 
 ----
 
@@ -60,3 +61,6 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 12: MySQL
 - Day 12 [MySQL, Workbench, Create Alter and Query from DB](Notes/August%202024/08_05/class12_08_05.ipynb)
+
+### Day 13: MySQL Continued
+- Day 13 [MySQL, Comparision and Local Operators, Updating and Deleting a row](Notes/August%202024/08_06/class13_08_06.ipynb)
