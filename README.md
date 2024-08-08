@@ -22,6 +22,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 11: Tkinter](#day-11-tkinter)
 - [Day 12: MySQL](#day-12-mysql)
 - [Day 13: MySQL Continued](#day-13-mysql-continued)
+- [Day 14: MySQL Continued 2](#day-14-mysql-continued_2)
 
 ----
 
@@ -64,3 +65,6 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 13: MySQL Continued
 - Day 13 [MySQL, Comparision and Local Operators, Updating and Deleting a row](Notes/August%202024/08_06/class13_08_06.ipynb)
+
+### Day 14: MySQL Continued 2
+- Day 14 [MySQL, Aggregate Functions, Order and Group by, Distinct Values](Notes/August%202024/08_07/class14_08_07.ipynb)
