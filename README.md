@@ -22,7 +22,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 11: Tkinter](#day-11-tkinter)
 - [Day 12: MySQL](#day-12-mysql)
 - [Day 13: MySQL Continued](#day-13-mysql-continued)
-- [Day 14: MySQL Continued 2](#day-14-mysql-continued_2)
+- [Day 14: MySQL Continued 2](#day-14-mysql-continued-2)
 
 ----
 
