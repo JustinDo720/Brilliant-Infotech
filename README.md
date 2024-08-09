@@ -23,6 +23,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 12: MySQL](#day-12-mysql)
 - [Day 13: MySQL Continued](#day-13-mysql-continued)
 - [Day 14: MySQL Continued 2](#day-14-mysql-continued-2)
+- [Day 15: MYSQL Continued 3](#day-15-mysql-continued-3)
 
 ----
 
@@ -68,3 +69,6 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 14: MySQL Continued 2
 - Day 14 [MySQL, Aggregate Functions, Order and Group by, Distinct Values](Notes/August%202024/08_07/class14_08_07.ipynb)
+
+### Day 15: MYSQL Continued 3
+- Day 15 [MySQL, Foreign Keys, Joins](Notes/August%202024/08_08/class15_08_08.ipynb)
