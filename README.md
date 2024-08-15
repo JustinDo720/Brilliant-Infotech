@@ -24,6 +24,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 13: MySQL Continued](#day-13-mysql-continued)
 - [Day 14: MySQL Continued 2](#day-14-mysql-continued-2)
 - [Day 15: MYSQL Continued 3](#day-15-mysql-continued-3)
+- [Day 16: MySQL continued 4](#day-16-mysql-continued-4)
 
 ----
 
@@ -72,3 +73,6 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 15: MYSQL Continued 3
 - Day 15 [MySQL, Foreign Keys, Joins](Notes/August%202024/08_08/class15_08_08.ipynb)
+
+### Day 16: MySQL continued 4
+- Day 16 [MySQL, Date and String Functions, Subqueries, Exists Keyword](Notes/August%202024/08_11/class16_08_11.ipynb)
