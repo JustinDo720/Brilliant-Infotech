@@ -84,6 +84,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 ### Day 17: MySQL Python
 
 ### Day 18: HTML Review
+- Day 18: [Starting HTML, Text Elements, Attributes, Tables, Lists](Notes/August%202024/08_18/class18_08_18.ipynb)
 
 ### Day 19: More HTML and Started CSS
 - Day 19 [Forms & Input Fields, CSS](Notes/August%202024/08_19/class19_08_19.ipynb)
