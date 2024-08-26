@@ -4,31 +4,142 @@
         <!-- Styling -->
         <style>
             #fb-title{
-                color:aqua
+                color:#0865fe;
+                font-size: 100px;
             }
             #welcome-text{
-                text-align:left
+                text-align:left;
+                float:left;
+                padding: auto;
+                position: relative;
+                top: 100px;
+                left: 75px;
             }
             #login-form{
-            
+                float:right;
+                background-color: #ffffff;
+                padding: 20px;
+                position:relative;
+                top: 120px;
+                right: 75px;
+                border-radius: 10px;
+                width: 30%;
+                /* horizontal_offset veritcle_offset blur_radius color_shadow */
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+                align-items: center;
             }
+            input {
+                display: block;
+                margin-bottom: 15px;
+                padding: 15px;
+                border: 1px solid;
+                border-radius: 5px;
+                width: 100%;
+            }
+            input[type='submit']{
+                background-color: #0865fe;
+                width: 100%;
+                color: white;
+                border: none;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 5px;
+                height: 5%;
+                font-weight: bold;
+            }
+            .new_acc_btn{
+                background-color: #42b72a;
+                color: white;
+                border: none;
+                text-align: center;
+                margin-top: 10px;
+                padding: 15px;
+                cursor: pointer;
+                border-radius: 5px;
+                /* Margin auto will center the block element */
+                margin: auto;
+                display: block;
+            }
+            a{
+                text-decoration: none;
+                text-align:center;
+                margin: auto;
+                display: block;
+            }
+            .outer-container{
+                width:70%;
+                margin: auto;
+                padding: auto;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            li{
+                display: inline-block;
+                margin-right:30px;
+                color: #9da1a4;
+            }
+            footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+            }
+
         </style>
     </head>
     <!-- HTML elements -->
-    <body background="#f0f3f4">
-        <!-- Facebook Information -->
-        <div class="container">
-            <div id="welcome-text" class="container">
-                <h1 id="fb-title">Facebook</h1>
-                <p>Connect with friends and the world around you on Facebook</p>
+    <body style='background-color: #f3f4f8;'>
+        <div class="container outer-container">
+            <!-- Facebook Information -->
+            <div id="welcome-text">
+                <h1 id="fb-title">facebook</h1>
+                <h3>
+                    Facebook helps you connect and share with the people in your life.
+                </h3>
             </div>
          
                 <!-- Login Form -->
-            <div id='login-form' class="continer">
-                <input type="text" placeholder="Email or Phone Number">
-                <input type="password" placeholder="Password">
+            <div id='login-form'>
+                <form action="https://www.facebook.com/?locale=vi_VN">
+                    <input type="text" placeholder="Email or Phone Number">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Log In">
+                </form>
+                <a href="#">
+                    Forgot Account?
+                </a>
+                <hr>
+                <button type="button" class="new_acc_btn">
+                    <b>
+                        Create New Account
+                    </b> 
+                </button>
             </div>
         </div>
+
+        <!-- Footer -->
+         <footer>
+            <ul>
+                <li>English (UK)</li>
+                <li>Tiếng Việt</li>
+                <li>中文(台灣)</li>
+                <li>한국어</li>
+                <li>日本語</li>
+                <li>Français (France)</li>
+                <li>ภาษาไทย</li>
+                <li>Español</li>
+                <li>Português (Brasil)</li>
+                <li>Deutsch</li>
+                <li>Italiano</li>
+            </ul>
+         </footer>
 
     </body>
 </html>
