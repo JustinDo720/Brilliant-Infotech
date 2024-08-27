@@ -25,6 +25,10 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 14: MySQL Continued 2](#day-14-mysql-continued-2)
 - [Day 15: MYSQL Continued 3](#day-15-mysql-continued-3)
 - [Day 16: MySQL continued 4](#day-16-mysql-continued-4)
+- [Day 17: MySQL Python](#day-17-mysql-python)
+- [Day 18: HTML Review](#day-18-html-review)
+- [Day 19: More HTML and Started CSS](#day-19-more-html-and-started-css)
+
 
 ----
 
@@ -76,3 +80,11 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 16: MySQL continued 4
 - Day 16 [MySQL, Date and String Functions, Subqueries, Exists Keyword](Notes/August%202024/08_11/class16_08_11.ipynb)
+
+### Day 17: MySQL Python
+
+### Day 18: HTML Review
+- Day 18: [Starting HTML, Text Elements, Attributes, Tables, Lists](Notes/August%202024/08_18/class18_08_18.ipynb)
+
+### Day 19: More HTML and Started CSS
+- Day 19 [Forms & Input Fields, CSS](Notes/August%202024/08_19/class19_08_19.ipynb)
