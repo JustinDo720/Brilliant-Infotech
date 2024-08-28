@@ -1,13 +1,19 @@
 <html>
     <head>
-
+        <style>
+        </style>
     </head>
     <body>
-        <form action="https://www.google.com/" method="post">
+        <form id='my_form' action="https://www.google.com/" method="post">
             <input id="username" type="text" placeholder="Username">
+            <br>
             <input id="pass" type="password" placeholder="Password">
+            <br>
             <button type="button" onclick="ck_form()">Submit Form</button>
         </form>
+        <input id='hide_form_btn' type="button" value='Hide Form' onclick="hide_form()">
+        <input id='show_form_btn' type="button" value='Show Form' onclick="show_form()" style="display:none">
+
         <script>
             function ck_form(){
                 un = document.getElementById('username').value
@@ -25,6 +31,34 @@
                 } else{
                     alert('Username and Password Cannot be empty')
                 }
+            }
+
+            function hide_form(){
+                console.log('Hiding Form')
+            
+                var form_ele = document.getElementById('my_form')
+                form_ele.style.display = 'none'
+
+                var hide_form_btn = document.getElementById('hide_form_btn')
+                hide_form_btn.style.display = 'none'
+
+                // show form button 
+                var show_form_btn = document.getElementById('show_form_btn')
+                show_form_btn.style.display = 'block'
+            }
+
+            function show_form(){
+                console.log('Showing Form')
+
+                var form_ele = document.getElementById('my_form')
+                form_ele.style.display = 'block'
+
+                var hide_form_btn = document.getElementById('hide_form_btn')
+                hide_form_btn.style.display = 'block'
+
+                // show form button 
+                var show_form_btn = document.getElementById('show_form_btn')
+                show_form_btn.style.display = 'none'
             }
         </script>
     </body>
