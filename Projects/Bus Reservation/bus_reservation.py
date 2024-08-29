@@ -6,7 +6,6 @@ import os
 
 
 # Connecting to our database
-
 conn = mysql.connect(
     host=os.environ.get('MYSQL_LOCAL_HOST'), 
     user=os.environ.get('MYSQL_LOCAL_USER'), 
@@ -19,13 +18,14 @@ cur = conn.cursor()
 
 # Bus Reservation Window 
 class BusReservation:
-    def __init__(self, root, username):
+    def __init__(self, root, username, user_id):
         self.root = root 
         self.root.title('Bus Reservation List')
         self.root.geometry('550x550')
 
         # User information 
         self.username = username 
+        self.user_id = user_id
 
         # Must be a treeview for tables
         self.tree = ttk.Treeview(root, columns=('bus_num', 'time', 'fare'), show='headings')
@@ -46,36 +46,66 @@ class BusReservation:
         self.tree.pack(expand=True)
         self.submit_selection = tk.Button(root, text='Select Reservation', command=self.row_sel)
         self.submit_selection.pack()
-    
+
+        self.view_res = tk.Button(root, text='View Reservations', command=self.view_all_res)
+        self.view_res.pack()
+
     def row_sel(self):
         item = self.tree.selection()
         if item:
             item_values = self.tree.item(item, 'values')
-            user_win = tk.Tk()
-            UserBusReservation(user_win, self.username, item_values)
+            query = """
+                INSERT INTO bus_res(username, username_id, bus_id)
+                VALUES(%s, %s , %s);
+            """
+            # (Username, User ID, Bus ID)
+            cur.execute(query, (self.username, self.user_id, item_values[0]))
+            # Must commit to our connection 
+            conn.commit()
 
-# Showing Specific User Bus Reservation 
+            # We could show them their Bus Reservation List
+            user_win = tk.Tk()
+            UserBusReservation(user_win, self.username, self.user_id)
+
+    def view_all_res(self):
+            # We could show them their Bus Reservation List
+            user_win = tk.Tk()
+            UserBusReservation(user_win, self.username, self.user_id)
+
 
 class UserBusReservation:
-    def __init__(self, root, username, res_details):
+    def __init__(self, root, username, user_id):
         self.root = root 
-        self.root.title(f"{username}'s Bus Reservation")
-        self.root.geometry('550x550')
+        self.root.title(f"{username}'s Bus Reservations")
+        self.root.geometry('750x550')
+        
+        self.user_res_label = tk.Label(root, text=f"{username.title()} Reservation")
+        self.user_res_label.grid(row=0, columnspan=2)
 
-        self.res_details = res_details
-        print(res_details)
+        # Our TreeView will be the same as Bus Reservation
+        self.tree = ttk.Treeview(root, columns=('username','bus_num', 'time', 'fare'), show='headings')
+        self.tree.heading('username', text='Username')
+        self.tree.heading('bus_num', text='Bus Number')
+        self.tree.heading('time', text='Timing')
+        self.tree.heading('fare', text='Fare')
+    
 
-        self.user_label = tk.Label(root, text=f"{username.title()}")
-        self.user_label.grid(row=0, columnspan=2)
-
-        self.bus_num_label = tk.Label(root, text=f"Bus Number: {res_details[0]}")
-        self.bus_num_label.grid(row=1,column=0)
-
-        self.bus_time_label = tk.Label(root, text=f"Bus Time: {res_details[1]}")
-        self.bus_time_label.grid(row=1,column=1)
-
-        self.bus_fare_label = tk.Label(root, text=f"Bus Fare: {res_details[2]}")
-        self.bus_fare_label.grid(row=1,column=2)
+        # Grabbing the user's reservations 
+        query = """
+            SELECT username, bus_id, timing, fare
+            FROM bus_res
+            LEFT JOIN bus_res_schedule 
+            ON bus_res.bus_id = bus_res_schedule.res_id
+            WHERE username_id = %s
+            AND username = %s
+            ORDER BY reservation_time
+    
+        """
+        cur.execute(query, (user_id, username))
+        results = cur.fetchall()
+        for result in results:
+            self.tree.insert('', 'end', values=result)
+        self.tree.grid(row=1, column=0)
 
 
 # Registration Form 
@@ -153,7 +183,7 @@ class MainApplication:
     def login(self):
         
         query = """
-            SELECT username,password
+            SELECT id,username,password
             FROM bus_res_login
             WHERE username = %s 
             AND password = %s
@@ -165,7 +195,8 @@ class MainApplication:
         
         if result:
             res_win = tk.Tk()
-            BusReservation(res_win, self.login_username_entry.get())
+            BusReservation(res_win, self.login_username_entry.get(), result[0])
+            self.root.destroy()
 
 root = tk.Tk()
 main_app = MainApplication(root)
