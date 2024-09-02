@@ -21,22 +21,24 @@ class BusReservation:
     def __init__(self, root, username, user_id):
         self.root = root 
         self.root.title('Bus Reservation List')
-        self.root.geometry('550x550')
+        self.root.geometry('850x450')
 
         # User information 
         self.username = username 
         self.user_id = user_id
 
         # Must be a treeview for tables
-        self.tree = ttk.Treeview(root, columns=('bus_num', 'time', 'fare'), show='headings')
+        self.tree = ttk.Treeview(root, columns=('bus_num', 'time', 'fare','av_seats'), show='headings')
         self.tree.heading('bus_num', text='Bus Number')
         self.tree.heading('time', text='Timing')
         self.tree.heading('fare', text='Fare')
+        self.tree.heading('av_seats', text='Available Seats')
 
         # Adding Bus Reservation to the table
         query = """
-            SELECT *
-            FROM bus_res_schedule     
+            SELECT res_id, timing, fare, seats AS 'Available Seats (Out of 50)'
+            FROM bus_res_schedule
+            WHERE seats >= 1     
         """
         cur.execute(query)
         results = cur.fetchall()
@@ -51,8 +53,10 @@ class BusReservation:
         self.view_res.pack()
 
     def row_sel(self):
-        item = self.tree.selection()
+        # One specific selection (not multiple)
+        item = self.tree.selection()[0]
         if item:
+            #
             item_values = self.tree.item(item, 'values')
             query = """
                 INSERT INTO bus_res(username, username_id, bus_id)
@@ -60,8 +64,23 @@ class BusReservation:
             """
             # (Username, User ID, Bus ID)
             cur.execute(query, (self.username, self.user_id, item_values[0]))
+
+            # Deduct 1 from the available seats for the bus
+            update_query = """
+                UPDATE bus_res_schedule
+                SET seats = seats - 1
+                WHERE res_id = %s AND seats > 0;
+            """
+            cur.execute(update_query, (item_values[0],))
+
             # Must commit to our connection 
             conn.commit()
+
+            # We also need to decrement the count within treeview to make a "live update"
+            curr_seats = int(item_values[3])    # 3 is the position of our seat header
+            if curr_seats > 0:
+                # keep all other values except for the 4th value
+                self.tree.item(item, values=(item_values[0], item_values[1], item_values[2], curr_seats-1))
 
             # We could show them their Bus Reservation List
             user_win = tk.Tk()
@@ -98,8 +117,7 @@ class UserBusReservation:
             ON bus_res.bus_id = bus_res_schedule.res_id
             WHERE username_id = %s
             AND username = %s
-            ORDER BY reservation_time
-    
+            ORDER BY bus_id
         """
         cur.execute(query, (user_id, username))
         results = cur.fetchall()
