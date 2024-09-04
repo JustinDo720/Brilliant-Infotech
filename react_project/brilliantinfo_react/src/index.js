@@ -5,12 +5,23 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import  Demo from './Demo';
 import { Upper } from './Upper';
+import { API } from './API'
+import { App } from "./App"
+import { Provider } from 'react-redux';
+import Calculator from './Cal'
+import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Demo demo_val={ true }></Demo>
-    <Upper my_str='my lowercase string'></Upper>
+    {/* <Demo demo_val={ true }></Demo>
+    <Upper my_str='my lowercase string'></Upper> */}
+    <Provider store={store}>
+      {/* <API></API>
+      <App></App> */}
+      <Calculator></Calculator>
+    </Provider>
+   
   </React.StrictMode>
 );
 
