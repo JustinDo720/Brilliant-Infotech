@@ -9,7 +9,8 @@ function Calculator(){
     const calculate = (operation, num1, num2)=>{
         switch (operation) {
             case 'add':
-                updateResult(num1 + num2); // adding 
+                {/* Numer() is basically int() */}
+                updateResult(Number(num1) + Number(num2)); // adding 
               break;
             case 'sub':
                 updateResult(num1 - num2); // subtracting 
@@ -28,8 +29,8 @@ function Calculator(){
     return <>
         <h1> Result: {result} </h1>
         {/* Now because we're using a functoin wtih an argument you must use an arrow function */}
-        <input type='text' value={num1} placeholder='First Number' onChange={(n) => {updateNum1(n.target.value)}}/> 
-        <input type='text' value={num2} placeholder='Second Number' onChange={(n) => {updateNum2(n.target.value)}}/>
+        <input type='number' value={num1} placeholder='First Number' onChange={(n) => {updateNum1(n.target.value)}}/> 
+        <input type='number' value={num2} placeholder='Second Number' onChange={(n) => {updateNum2(n.target.value)}}/>
 
         <button onClick={() => {calculate('add', num1, num2)}}>
             +

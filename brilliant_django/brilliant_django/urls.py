@@ -23,4 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.demo),
     path('', views.demo2),
+    path('squared/', views.squared_num),
+    path('uppercased/', views.uppercased)
 ]
