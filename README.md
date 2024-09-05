@@ -28,6 +28,8 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 17: MySQL Python](#day-17-mysql-python)
 - [Day 18: HTML Review](#day-18-html-review)
 - [Day 19: More HTML and Started CSS](#day-19-more-html-and-started-css)
+- [Day 19.5: Advanced CSS](#day-19-more-html-and-started-css)
+- [Day 20: Starting Bootstrap](#day-20-starting-bootstrap)
 
 
 ----
@@ -88,3 +90,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 19: More HTML and Started CSS
 - Day 19 [Forms & Input Fields, CSS](Notes/August%202024/08_19/class19_08_19.ipynb)
+- Day 19.5 [CSS Blocks, Positions, Floats, Styling Forms](Notes/August%202024/08_20/class19_05_08_20.ipynb)
+
+### Day 20: Starting Bootstrap
+- Day 20 [Font Awesome, Boostrap Grid Sys, Textcolor, Tables, Imgs, Buttons, Badges, Progress Bar](Notes/August%202024/08_21/class20_08_21.ipynb)
