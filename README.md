@@ -26,10 +26,16 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 15: MYSQL Continued 3](#day-15-mysql-continued-3)
 - [Day 16: MySQL continued 4](#day-16-mysql-continued-4)
 - [Day 17: MySQL Python](#day-17-mysql-python)
+
+**[Part 3](#part-3-front-end)**
 - [Day 18: HTML Review](#day-18-html-review)
 - [Day 19: More HTML and Started CSS](#day-19-more-html-and-started-css)
 - [Day 19.5: Advanced CSS](#day-19-more-html-and-started-css)
 - [Day 20: Starting Bootstrap](#day-20-starting-bootstrap)
+- [Day 21: More Bootstrap](#day-21-more-bootstrap)
+- [Day 22: Starting Javascript](#day-22-starting-javascript)
+- [Day 23: Advanced Js](#day-23-advanced-javascript)
+- [Day 24: More Advanced JS](#day-24-more-advanced_javascript)
 
 
 ----
@@ -85,6 +91,8 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 17: MySQL Python
 
+## Part 3 Front End
+
 ### Day 18: HTML Review
 - Day 18: [Starting HTML, Text Elements, Attributes, Tables, Lists](Notes/August%202024/08_18/class18_08_18.ipynb)
 
@@ -94,3 +102,16 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 20: Starting Bootstrap
 - Day 20 [Font Awesome, Boostrap Grid Sys, Textcolor, Tables, Imgs, Buttons, Badges, Progress Bar](Notes/August%202024/08_21/class20_08_21.ipynb)
+
+### Day 21: More Bootstrap
+- Day 21 [Cards, Dropdown, Navbar, Forms](Notes/August%202024/08_22/class21_08_22.ipynb)
+
+### Day 22 Starting Javascript
+- Day 22 [Javascript Syntax, Variables, Data Types & Operators, Conditionals, Loops, Arrays, Functions](Notes/August%202024/08_25/class22_08_25.ipynb)
+
+### Day 23 Advanced Javascript
+- Day 23 [Callback Functions, Hashmap, String Functions, DOM](Notes/August%202024/08_26/class23_08_26.ipynb)
+
+
+### Day 24 More Advanced Javascript
+- Day 24 [Async, Promises, Await](Notes/August%202024/08_27/class24_08_26.ipynb)
