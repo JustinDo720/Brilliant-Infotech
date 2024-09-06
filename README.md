@@ -37,6 +37,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 23: Advanced Js](#day-23-advanced-javascript)
 - [Day 24: More Advanced JS](#day-24-more-advanced_javascript)
 - [Day 25: React.js](#day-25-reactjs)
+- [Day 26: Advanced React.js ][#day-26-advanced-reactjs]
 
 
 ----
@@ -120,6 +121,8 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 ### Day 25: React.js
 - Day 25 [Virtual Dom, JSX, Props and Conditional Rendering](Notes/August%202024/08_28/class25_08_28.ipynb)
 
+### Day 26: Advanced React.js
+- Day 26 [React API, React Redux](Notes/September%202024/09_03/class26_09_03.ipynb)
 
 ---
 
