@@ -37,7 +37,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 23: Advanced Js](#day-23-advanced-javascript)
 - [Day 24: More Advanced JS](#day-24-more-advanced_javascript)
 - [Day 25: React.js](#day-25-reactjs)
-- [Day 26: Advanced React.js ][#day-26-advanced-reactjs]
+- [Day 26: Advanced React.js ](#day-26-advanced-reactjs)
 
 
 ----

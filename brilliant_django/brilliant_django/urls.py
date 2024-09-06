@@ -24,5 +24,6 @@ urlpatterns = [
     path('home/', views.demo),
     path('', views.demo2),
     path('squared/', views.squared_num),
-    path('uppercased/', views.uppercased)
+    path('uppercased/', views.uppercased),
+    path('demo3/', views.demo3)
 ]

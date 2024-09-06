@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import date
 # Create your views here.
 
 # Request is always mandatory 
@@ -16,3 +17,11 @@ def squared_num(request):
 
 def uppercased(request):
     return render(request, 'uppercased.html', {'word': 'thy'})
+
+
+def demo3(request):
+    context = {
+        {'name':'Justin'}, {'name', 'Thy'}
+    }
+    return render(request, 'demo3.html', context)
+    #return render(request, 'demo3.html', {'num': 2, 'name':'Thy', 't_date': date(2024, 9, 6)})
