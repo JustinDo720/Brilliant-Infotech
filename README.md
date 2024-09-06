@@ -36,6 +36,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 22: Starting Javascript](#day-22-starting-javascript)
 - [Day 23: Advanced Js](#day-23-advanced-javascript)
 - [Day 24: More Advanced JS](#day-24-more-advanced_javascript)
+- [Day 25: React.js](#day-25-reactjs)
 
 
 ----
@@ -115,3 +116,15 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 24 More Advanced Javascript
 - Day 24 [Async, Promises, Await](Notes/August%202024/08_27/class24_08_26.ipynb)
+
+### Day 25: React.js
+- Day 25 [Virtual Dom, JSX, Props and Conditional Rendering](Notes/August%202024/08_28/class25_08_28.ipynb)
+
+
+---
+
+## Missing
+
+08/30
+09/02
+09/03
