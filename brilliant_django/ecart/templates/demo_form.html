@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <!-- If using file must use enctype -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ student }}
+            <input value="submit"/>
+        </form>
+        
+    </body>
+</html>

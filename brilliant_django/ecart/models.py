@@ -5,3 +5,12 @@ class Project(models.Model):
     product_name = models.CharField(max_length=100)
     product_price = models.IntegerField()
     product_qty = models.IntegerField()
+
+
+# Student Model used in forms.py
+class StudentModel(models.Model):
+    name = models.CharField(max_length=60)
+    marks = models.IntegerField()
+    file = models.FileField(null=True, upload_to='files/')
+    image = models.ImageField(null=True, upload_to='upload/')
+
