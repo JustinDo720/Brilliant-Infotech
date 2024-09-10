@@ -39,6 +39,10 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 25: React.js](#day-25-reactjs)
 - [Day 26: Advanced React.js ](#day-26-advanced-reactjs)
 
+**[Part 4](#part-4-back-end)**
+- [Day 27: Starting Django](#day-27-starting-django)
+- [Day 28: More Django](#day-28-more-django)
+
 
 ----
 
@@ -123,6 +127,17 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 26: Advanced React.js
 - Day 26 [React API, React Redux](Notes/September%202024/09_03/class26_09_03.ipynb)
+
+
+# Part 4 Back End
+
+### Day 27 Starting Django
+- Day 27 [Django MVC, Settings, Views, Urls, Database, Templates, Admin, Models](Notes/September%202024/09_04/class27_09_04.ipynb)
+
+### Day 28 More Django
+- Day 28 [Jinja: Loops, Conditions, Filters, Including Templates, Static Files](Notes/September%202024/09_05/class28_09_05.ipynb)
+
+
 
 ---
 
