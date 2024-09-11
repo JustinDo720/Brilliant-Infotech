@@ -33,7 +33,7 @@ def demo_form(request):
         student = StudentForm(request.POST, request.FILES)
         if student.is_valid():
             student.save()
-            return redirect('')
+            return redirect('homepage')
     else:
         # GET request 
         student = StudentForm(request.POST, request.FILES)

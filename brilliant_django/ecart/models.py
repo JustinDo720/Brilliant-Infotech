@@ -1,4 +1,5 @@
 from django.db import models
+from .fileChecker import ContentTypeRestrictedFileField
 
 # Create your models here.
 class Project(models.Model):
@@ -11,6 +12,6 @@ class Project(models.Model):
 class StudentModel(models.Model):
     name = models.CharField(max_length=60)
     marks = models.IntegerField()
-    file = models.FileField(null=True, upload_to='files/')
+    document = ContentTypeRestrictedFileField(null=True, upload_to='files/', content_types=['application/vnd.openxmlformats-officedocument.wordprocessingml.document', ],max_upload_size=90000)
     image = models.ImageField(null=True, upload_to='upload/')
 

@@ -21,8 +21,8 @@ from ecart import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.demo),
-    path('', views.demo2),
+    # path('home/', views.demo),
+    path('', views.demo2, name='homepage'),
     path('squared/', views.squared_num),
     path('uppercased/', views.uppercased),
     path('demo3/', views.demo3),
