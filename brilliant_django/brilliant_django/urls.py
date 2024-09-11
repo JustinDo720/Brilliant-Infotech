@@ -26,5 +26,8 @@ urlpatterns = [
     path('squared/', views.squared_num),
     path('uppercased/', views.uppercased),
     path('demo3/', views.demo3),
-    path('demo_form/', views.demo_form)
+    path('demo_form/', views.demo_form),
+    path('register/', views.user_registration, name='register'),
+    path('login/', views.login_fun, name='login'),
+    path('setcookie/', views.setcookie)
 ]

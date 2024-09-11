@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from datetime import date
 from .forms import StudentForm
+from django.contrib.auth.models import User 
+from django.contrib.auth import authenticate, login
+
+
 # Create your views here.
 
 # Request is always mandatory 
@@ -47,3 +51,51 @@ def handle_uploaded_file(file_obj):
     with open('ecart/static/upload' + file_obj.name, 'wb+') as des:
         for chunk in file_obj.chunks():
             des.write(chunk)
+
+
+def user_registration(request):
+    if request.method == 'POST':
+        first_name = request.POST['firstName']
+        last_name = request.POST['lastName']
+        email = request.POST['email']
+        password = request.POST['password']
+        username = request.POST['username']
+
+        user_exists = User.objects.filter(username=username)
+        if user_exists.exists():
+            return redirect('register')
+        # creating new user
+        user = User.objects.create_user(first_name=first_name,
+                                 last_name=last_name,
+                                 username=username,
+                                 password=password,
+                                 email=email)
+        user.save()
+        return render(request, 'login.html')
+    return render(request, 'user_registration_form.html')
+
+def login_fun(request):
+    if request.method == 'POST':
+        password = request.POST['password']
+        username = request.POST['username']
+        if not User.objects.filter(username=username).exists():
+            return redirect('login')
+        user= authenticate(username=username, password=password)
+
+        if user is None:
+            return redirect('register')
+        else:
+            login(request, user)
+            return redirect('homepage')
+    return render(request, 'login.html')
+
+
+def setcookie(request):
+    response = HttpResponse("Cookie is Set")
+    response.set_cookie('cookie_name', 'cookie_value')
+    return response
+
+def getcookie(request):
+    # Array
+    cookie = redirect.COOKIES['cookie_name']
+    return HttpResponse(cookie)
