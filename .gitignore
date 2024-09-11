@@ -3,3 +3,5 @@ Notes/August 2024/08_05/class08_05_mysql_share.pdf
 .venv
 node_modules
 brilliant_django\ecart\static
+brilliant_django\files\
+brilliant_django\upload\
