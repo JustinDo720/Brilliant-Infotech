@@ -29,5 +29,6 @@ urlpatterns = [
     path('demo_form/', views.demo_form),
     path('register/', views.user_registration, name='register'),
     path('login/', views.login_fun, name='login'),
-    path('setcookie/', views.setcookie)
+    path('setcookie/', views.setcookie),
+    path('page_vists/', views.cookie_vists)
 ]

@@ -38,6 +38,8 @@ def demo_form(request):
         if student.is_valid():
             student.save()
             return redirect('homepage')
+        # if the form isn't valid we'll still render the demo form
+        return render(request, 'demo_form.html', {'student':student})
     else:
         # GET request 
         student = StudentForm(request.POST, request.FILES)
@@ -97,5 +99,29 @@ def setcookie(request):
 
 def getcookie(request):
     # Array
-    cookie = redirect.COOKIES['cookie_name']
+    cookie = request.COOKIES['cookie_name']
     return HttpResponse(cookie)
+
+
+def cookie_vists(request):
+    # Context to add in times_visted
+    context = {}
+
+    # Check if we have a cookied called "vists" if not we make one
+    # We use get in case of key error
+    if request.COOKIES.get('vists', 0):
+        # We're going to grab that cookie an increment it by 1 
+        vists = request.COOKIES['vists']
+        new_vist_val = int(vists) + 1
+        context['times_visted'] = new_vist_val
+    else:
+        # Because this is the first time, we'll set the vists to 1 
+        context['times_visted'] = 1
+
+    response = render(request, 'cookie_vists.html', context)
+    response.set_cookie('vists', context['times_visted'])
+    
+    return response
+
+    
+    
