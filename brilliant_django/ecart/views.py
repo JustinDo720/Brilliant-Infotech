@@ -5,7 +5,6 @@ from .forms import StudentForm
 from django.contrib.auth.models import User 
 from django.contrib.auth import authenticate, login
 
-
 # Create your views here.
 
 # Request is always mandatory 
@@ -154,7 +153,7 @@ def cookie_register(request):
 
         user_exists = User.objects.filter(username=username)
         if user_exists.exists():
-            return redirect('register')
+            return redirect('cookie_register')
         # creating new user
         user = User.objects.create_user(first_name=first_name,
                                  last_name=last_name,
@@ -184,3 +183,15 @@ def cookie_auth_homepage(request):
 
 def cookie_homepage(request):
     return render(request, 'cookie_homepage.html')
+
+# Sessions 
+
+def setsession(request):
+    request.session['name'] = 'Thy'
+    return HttpResponse('Session set')
+
+
+# Fetching 
+
+def display(request):
+    users = User.objects.all()
