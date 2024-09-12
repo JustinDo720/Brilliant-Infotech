@@ -124,4 +124,63 @@ def cookie_vists(request):
     return response
 
     
-    
+def cookie_login(request):
+    # We don't even need a form beacuse we're going to use cookies
+    if request.COOKIES.get('username',0) and request.COOKIES.get('password',0):
+        # that means we have these cookies to perform an auth
+        user = authenticate(username=request.COOKIES.get('username',0), 
+                            password=request.COOKIES.get('password',0))
+
+        # if there is no user..
+        if not user:
+            return redirect('cookie_register')
+        else:
+            # there is a user
+            login(request, user)
+            return redirect('cookie_auth_homepage')
+    else:
+        # We're bringing them to the register page 
+        return redirect('cookie_register')
+
+
+
+def cookie_register(request):
+     if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
+        password = request.POST['password']
+        username = request.POST['username']
+
+        user_exists = User.objects.filter(username=username)
+        if user_exists.exists():
+            return redirect('register')
+        # creating new user
+        user = User.objects.create_user(first_name=first_name,
+                                 last_name=last_name,
+                                 username=username,
+                                 password=password,
+                                 email=email)
+        
+        # Once we create our user we could set our cookies 
+        response = redirect('cookie_login')
+        response.set_cookie('username', username)
+        response.set_cookie('password', password)
+
+        # After we create a new user, we redirect to login
+        return response
+     else:
+         return render(request, 'cookie_register.html')
+
+
+def cookie_logout(request):
+    # Return to normal homepage 
+    # We're not removing the cookies because we won't be able to login
+    return redirect('cookie_homepage')
+
+
+def cookie_auth_homepage(request):
+    return render(request, 'cookie_auth_homepage.html')
+
+def cookie_homepage(request):
+    return render(request, 'cookie_homepage.html')

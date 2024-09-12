@@ -1,0 +1,12 @@
+<html></html>
+    <body>
+        <form method="POST" action="{% url 'cookie_homepage' %}">
+            {% csrf_token %}
+            Username: <input type="text" name="username"/>
+            <br>
+            Password: <input type="password" name="password"/>
+            <br>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>

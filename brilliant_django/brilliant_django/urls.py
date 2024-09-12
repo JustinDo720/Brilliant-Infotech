@@ -30,5 +30,11 @@ urlpatterns = [
     path('register/', views.user_registration, name='register'),
     path('login/', views.login_fun, name='login'),
     path('setcookie/', views.setcookie),
-    path('page_vists/', views.cookie_vists)
+    path('page_vists/', views.cookie_vists),
+    path('cookie_homepage/', views.cookie_homepage, name='cookie_homepage'),
+    path('cookie_login/', views.cookie_login, name='cookie_login'),
+    path('cookie_logout/', views.cookie_logout, name='cookie_logout'),
+    path('cookie_register/', views.cookie_register, name='cookie_register'),
+    path('cookie_auth_homepage/', views.cookie_auth_homepage, name='cookie_auth_homepage'),
+
 ]
