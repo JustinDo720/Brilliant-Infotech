@@ -42,6 +42,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 **[Part 4](#part-4-back-end)**
 - [Day 27: Starting Django](#day-27-starting-django)
 - [Day 28: More Django](#day-28-more-django)
+- [Day 31: Django CRUD & Sessions](#day-31-django-crud-and-sessions)
 
 
 ----
@@ -137,7 +138,8 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 ### Day 28 More Django
 - Day 28 [Jinja: Loops, Conditions, Filters, Including Templates, Static Files](Notes/September%202024/09_05/class28_09_05.ipynb)
 
-
+### Day 31 Django Crud And Sessions
+- Day 31 [Django Create, Read, Update and Delete, Django Sessions](Notes/September%202024/09_11/class31_09_11.ipynb)
 
 ---
 
