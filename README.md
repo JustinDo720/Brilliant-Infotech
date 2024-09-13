@@ -43,6 +43,7 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 - [Day 27: Starting Django](#day-27-starting-django)
 - [Day 28: More Django](#day-28-more-django)
 - [Day 31: Django CRUD & Sessions](#day-31-django-crud-and-sessions)
+- [Day 32: Django ForeignKey & Relationships](#day-32-django-foreignkey-and-relationships)
 
 
 ----
@@ -140,6 +141,11 @@ This repository will track my training with **Brilliant Infotech** for the **Pyt
 
 ### Day 31 Django Crud And Sessions
 - Day 31 [Django Create, Read, Update and Delete, Django Sessions](Notes/September%202024/09_11/class31_09_11.ipynb)
+
+
+### Day 32 Django Foreignkey And Relationships
+- Day 32 [Django FK and Relationships](Notes/September%202024/09_12/class32_09_12.ipynb)
+
 
 ---
 
