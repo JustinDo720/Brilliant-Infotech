@@ -37,4 +37,5 @@ urlpatterns = [
     path('cookie_register/', views.cookie_register, name='cookie_register'),
     path('cookie_auth_homepage/', views.cookie_auth_homepage, name='cookie_auth_homepage'),
     path('setsession/', views.setsession, name='setsession'),
+    path('bootstrapped/', views.bootstrapped)
 ]

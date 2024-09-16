@@ -195,3 +195,6 @@ def setsession(request):
 
 def display(request):
     users = User.objects.all()
+
+def bootstrapped(request):
+    return render(request, 'bootstrapped.html')

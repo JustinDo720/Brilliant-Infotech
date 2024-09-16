@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ecart',
+    'bootstrap5',
+    'ecartv2',
 ]
 
 MIDDLEWARE = [
